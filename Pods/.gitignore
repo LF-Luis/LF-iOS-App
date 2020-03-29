@@ -1,0 +1,5 @@
+# Use this to ignore all files and folders inside of Pods directory (these will be the source code of the dependencies that this open source project uses)
+
+# *
+# */
+# !.gitignore

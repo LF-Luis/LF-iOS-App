@@ -1,0 +1,3 @@
+# Treat any file with the ".pbxproj" extension as a binary and when merge conflicts arise, fix them
+# through a union (i.e.: combine them).
+*.pbxproj binary merge=union

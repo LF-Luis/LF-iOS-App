@@ -1,0 +1,47 @@
+PODS:
+  - Alamofire (4.7.3)
+  - AlamofireImage (3.4.1):
+    - Alamofire (~> 4.7)
+  - CryptoSwift (0.14.0)
+  - DZNEmptyDataSet (1.8.1)
+  - Eureka (4.2.0)
+  - Onboard (2.3.3)
+  - Realm (3.13.1):
+    - Realm/Headers (= 3.13.1)
+  - Realm/Headers (3.13.1)
+  - RealmSwift (3.13.1):
+    - Realm (= 3.13.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - CryptoSwift (~> 0.14.0)
+  - DZNEmptyDataSet
+  - Eureka
+  - Onboard
+  - RealmSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - CryptoSwift
+    - DZNEmptyDataSet
+    - Eureka
+    - Onboard
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
+  CryptoSwift: 35a10419f4dbf0619c13f8c1c180037e115323fa
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  Eureka: 0748c7bbb2560130e43c7bfa83e99c98854a1f42
+  Onboard: 4d6e943e20bdd6bc229df967a347dd7514bc2a6f
+  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
+  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
+
+PODFILE CHECKSUM: 9db1ca530bc94c4c9637828592fdded94ffe4fed
+
+COCOAPODS: 1.6.1
