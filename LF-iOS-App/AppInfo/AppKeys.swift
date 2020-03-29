@@ -13,6 +13,13 @@ import CoreLocation
  */
 
 struct AppSettingKeys {
+
+    /**
+     This key is not set the first time the app opens, thus it can be used to check the first time the app opens.
+     It is used for the open source version of the app, to show the verification steps the first time the app opens.
+     */
+    static let isAppFirstLaunch: String = "isAppFirstLaunch"
+
     // App settings to persist
     static let inAppVibSettingBool: String = "inAppVibSettingBool"
 

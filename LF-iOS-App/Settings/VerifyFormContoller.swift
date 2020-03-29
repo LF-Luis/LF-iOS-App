@@ -42,6 +42,20 @@ class VerifyFormContoller: LFFormViewController {
 
     func verifyAction() {
 
+#if NO_WEB_API_TESTING
+        // For testing without web APIs, behave as if verification was done successfully
+
+        // Fake in-app notif for finished registration
+        NotificationCenter.default.post(name: .didFinishRegister, object: nil)
+
+        // Dismiss nav controller
+        if self.navigationController?.dismiss(animated: true, completion: nil) == nil {
+            self.dismiss(animated: true, completion: nil)
+        }
+        return
+
+#endif
+
         // UI Change, set overlay with loading screen
         let overlay = LFOverlay()
         overlay.showOverlayOverAppWindow(withTitle: nil)
@@ -54,10 +68,10 @@ class VerifyFormContoller: LFFormViewController {
             return
         }
 
-        UserVerification.verifyRegistration(oneTimePasscode: oneTimePasscode) { (didScceed: Bool) in
+        UserVerification.verifyRegistration(oneTimePasscode: oneTimePasscode) { (didSucceed: Bool) in
             // UI change, end overlay
             overlay.endOverlay()
-            if didScceed {
+            if didSucceed {
                 // The main home view controller is waiting for this notification to
                 // continue with its setup.
                 NotificationCenter.default.post(name: .didFinishRegister, object: nil)

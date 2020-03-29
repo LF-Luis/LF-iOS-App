@@ -8,26 +8,22 @@
 import Foundation
 
 // MARK: - Public Facing Test API
-
 #if NO_BEACON_TESTING
-//extension UserStateManager {
-//    func runTestNoBeacons() {
-//        // Make the BeaconManager stop sniffing for beacons
-//        self.stopScanning()
-//        let userTesting = UserTesting()
-//        if userTesting.shouldRunTestAPI() {
-//            // call web API and load beacon data
-//            self.testLoadBeaconsWithData()
-//        }
-//    }
-//}
+extension UserStateManager {
+    func runTestNoBeacons() {
+        // Make the BeaconManager stop sniffing for beacons
+        self.stopScanning()
+        let userTesting = UserTesting()
+        if userTesting.shouldRunTestAPI() {
+            // call web API and load beacon data
+            self.testLoadBeaconsWithData()
+        }
+    }
+}
 #endif
 
-#if NO_BEACON_TESTING
-
 // MARK: - File Private Test APIs
-
-
+#if NO_BEACON_TESTING
 extension UserStateManager {
 
     fileprivate func testLoadBeaconsWithData() {

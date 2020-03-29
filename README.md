@@ -7,11 +7,17 @@ The IoT technology that this app uses are BLE iBeacons, see [Apple's docs](https
 
 # Getting Started
 
+## State of the App
+When you clone the app, the debugging flag `-D NO_WEB_API_TESTING` will be set.  
+With this flag on, the web API logic is substitued with fake data hardcoded in the debugging module.  
+See **./Debugging/README.md** for more info on debugging modes and fake data being used. 
+
 ## Build 
 - Xocde 10.3  
 - Swift 4
 - Deployment Target: iOS 11.0 
 
 ## Dependencies
-### Cocoapods
 The only dependecies for this app come from [Cocoapods](https://cocoapods.org). To ease with portability, the source files are included in this repo.
+
+

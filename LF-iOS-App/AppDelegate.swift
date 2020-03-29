@@ -17,17 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        // MARK:- Launching app for first time, settings check
-//        let defaults = UserDefaults.standard
-//        
-//        if defaults.object(forKey: AppSettingKeys.inAppVibSettingBool) != nil {
-//            print("App has launched before, key-value pairs have been set")
-//        }
-//        else {
-//            defaults.set(true, forKey: AppSettingKeys.inAppVibSettingBool)
-//            print("App is launching for the first time")
-//        }
-
         // Realm migrations
         // see: https://realm.io/docs/swift/latest/#migrations
         let config = Realm.Configuration(

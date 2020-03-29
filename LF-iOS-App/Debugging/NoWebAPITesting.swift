@@ -59,18 +59,24 @@ fileprivate class NoWebAPITestingHelper: NSObject {
         dataForBeacon_1.didPerformActionA = true
         dataForBeacon_1.metric2 = 20
         dataForBeacon_1.metric3 = 4
-        dataForBeacon_1.shortExtraStr = "There's more"
+        dataForBeacon_1.shortExtraStr = "More"
         dataForBeacon_1.longExtraStr = "There's more information here about the text in front of the cell."
+        dataForBeacon_1.website = "https://www.apple.com"
+        dataForBeacon_1.bcnPhoneNum = "0"
+        dataForBeacon_1.realAddress = "One Apple Park Way, Cupertino, CA 95014"
 
         // 2
         let dataForBeacon_2 = DataForBeacon()
-        dataForBeacon_2.mainName = "Test Name 2 Long Name That Must be Wrapped By the app hopefully And Hopefully no name will ever be this long"
+        dataForBeacon_2.mainName = "Test Name 2 Long Name That Must be Wrapped By the App Test Name 2 Long Name That Must be Wrapped By the App"
         dataForBeacon_2.imageUrl = "https://res.cloudinary.com/maa/image/upload/c_lfill,g_auto,f_auto,q_auto:eco,h_1252,w_2160/v1/maac/-/media/images/metro-landing-page-heros/austin_tx.jpg"
-        dataForBeacon_2.metric1 = 7
+        dataForBeacon_2.metric1 = 3
         dataForBeacon_2.didPerformActionA = false
         dataForBeacon_2.metric2 = 15
         dataForBeacon_2.metric3 = 2
-        dataForBeacon_2.shortExtraStr = "Short String"
+        dataForBeacon_2.shortExtraStr = "Add"
+        dataForBeacon_2.website = "https://www.apple.com"
+        dataForBeacon_2.bcnPhoneNum = "0"
+        dataForBeacon_2.realAddress = "One Apple Park Way, Cupertino, CA 95014"
 
         // 3
         let dataForBeacon_3 = DataForBeacon()
@@ -79,6 +85,9 @@ fileprivate class NoWebAPITestingHelper: NSObject {
         dataForBeacon_3.metric1 = 7
         dataForBeacon_3.metric2 = 2
         dataForBeacon_3.metric3 = 1
+        dataForBeacon_3.website = "https://www.apple.com"
+        dataForBeacon_3.bcnPhoneNum = "0"
+        dataForBeacon_3.realAddress = "One Apple Park Way, Cupertino, CA 95014"
 
         var beaconDict = Dictionary<String, DataForBeacon>()
         beaconDict["1"] = dataForBeacon_1

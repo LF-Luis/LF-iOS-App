@@ -61,10 +61,42 @@ class HomeCollectionVC: BaseCollectionVC, UserStateManagerDelegate {
         navBarSetup()
         setUpNotifObservers()
 
-        // Testing without using web APIs (this is done mainly to test various UI changes)
+        var registrationNavController = UINavigationController()
+
+// Testing without using web APIs
 #if NO_WEB_API_TESTING
-        self.setUpUserStateManaging()
+
+        // Show example of onboarding first time app is used:
+
+        let defaults = UserDefaults.standard
+
+        if defaults.object(forKey: AppSettingKeys.isAppFirstLaunch) != nil {
+            // App has launched before, key-value pair has been set
+        }
+        else {
+            // App is launching for the first time
+            defaults.set(true, forKey: AppSettingKeys.isAppFirstLaunch)
+
+            var onboarding = UIViewController()
+
+            onboarding = AppOnboarding.onboardingViewController { () in
+
+                onboarding.dismiss(animated: true, completion: nil)
+
+                // Registration process
+                // Once this is completed, setUpUserStateManaging(...) will be called via an
+                // in-app notification
+                let editUserInfo = EditUserInfo()
+                registrationNavController.interactivePopGestureRecognizer?.isEnabled = false
+                registrationNavController = UINavigationController(rootViewController: editUserInfo)
+
+                self.present(registrationNavController, animated: true, completion: nil)
+
+            }
+            self.present(onboarding, animated: true, completion: nil)
+        }
         return
+
 #endif
 
         // The following flow is controlled by the fact if User's info has been set or not.
@@ -72,7 +104,6 @@ class HomeCollectionVC: BaseCollectionVC, UserStateManagerDelegate {
         // registration and verification.
 
         let mainUser = MainUser()
-        var registrationNavController = UINavigationController()
 
         if mainUser.getValues() == nil && UserVerification.verificationCodeDoesExist() == false {
             // (Sign-up process) Launch onboarding, which is followed by registration

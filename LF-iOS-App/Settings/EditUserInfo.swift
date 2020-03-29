@@ -82,6 +82,14 @@ class EditUserInfo: LFFormViewController, UITextViewDelegate { // UITextFieldDel
     }
 
     func registerAction() {
+
+#if NO_WEB_API_TESTING
+        // For testing without web APIs, move on to a VerifyFormContoller without having to actually
+        // register User.
+        let verificationForm = VerifyFormContoller()
+        self.navigationController?.pushViewController(verificationForm, animated: true)
+        return
+#endif
         // UI Change, set overlay with loading screen
         let overlay = LFOverlay()
         overlay.showOverlayOverAppWindow(withTitle: nil)

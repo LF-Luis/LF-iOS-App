@@ -98,7 +98,7 @@ class BaseCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
             return UIImage(named: "LaunchScreenPic")
         }
         
-        return UIImage(cgImage: cgImg, scale: 10, orientation: UIImageOrientation.up)
+        return UIImage(cgImage: cgImg, scale: 2, orientation: UIImageOrientation.up)
     }
 
     func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {

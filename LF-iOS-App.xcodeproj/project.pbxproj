@@ -182,8 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				EA6376FA242054B00041031F /* EditUserInfo.swift */,
-				EA6376FB242054B00041031F /* SettingsVC.swift */,
 				EA6376FC242054B00041031F /* VerifyFormContoller.swift */,
+				EA6376FB242054B00041031F /* SettingsVC.swift */,
 			);
 			name = Settings;
 			path = "New Group";
@@ -840,7 +840,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/LF-iOS-App/AppInfo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D NO_WEB_API_TESTING";
 				PRODUCT_BUNDLE_IDENTIFIER = LuisFernandez.LFiOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -883,7 +883,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "LF-iOS-AppTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.LuisFernandez.Poroject-BLE-EventsTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LuisFernandez.LF-iOS-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -900,7 +900,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "LF-iOS-AppTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.LuisFernandez.Poroject-BLE-EventsTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LuisFernandez.LF-iOS-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -916,7 +916,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "LF-iOS-AppUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.LuisFernandez.Poroject-BLE-EventsUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LuisFernandez.LF-iOS-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -932,7 +932,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "LF-iOS-AppUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.LuisFernandez.Poroject-BLE-EventsUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LuisFernandez.LF-iOS-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
