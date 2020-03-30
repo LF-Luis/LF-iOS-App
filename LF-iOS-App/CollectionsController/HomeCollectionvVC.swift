@@ -72,6 +72,8 @@ class HomeCollectionVC: BaseCollectionVC, UserStateManagerDelegate {
 
         if defaults.object(forKey: AppSettingKeys.isAppFirstLaunch) != nil {
             // App has launched before, key-value pair has been set
+            self.setUpUserStateManaging()
+            return
         }
         else {
             // App is launching for the first time

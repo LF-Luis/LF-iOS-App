@@ -65,6 +65,15 @@ extension UserStateManager {
         // Ask User if they are sure they want to cancel Action A
         Alerts.present(title: "Project", message: message, completionString: "Yes", cancelString: "No", withController: vC) {
 
+// Testing without using web APIs
+#if NO_WEB_API_TESTING
+            /* *****************************************************************************/
+            // This snipped of code comes from the "didSucceed" AzureAPI call below
+            completion(true)
+            return
+            /* *****************************************************************************/
+#endif
+
             // User decided to cancel Action A for this cell
             // Parametrize data for API
             guard let paramData = ParametrizeForAPI.cancelActionA(withDataForBcn: bcr) else {

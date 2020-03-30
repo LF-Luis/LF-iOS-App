@@ -165,7 +165,7 @@ class ExpandCellForActionAView: UIView {
         addConstraintsWithVisualFormat("H:|-35-[v0]-35-|", views: actionAButton)
         addConstraintsWithVisualFormat("H:|-35-[v0]-35-|", views: cancelButton)
         addConstraintsWithVisualFormat("V:[v0(80)]-30-[v1]-80-[v2(30)]-20-[v3(30)]", views: titleLabel, iconImg, actionAButton, cancelButton)
-        addConstraintsWithVisualFormat("V:[v0(30)]-20-[v1]", views: stateLabel, cancelButton)
+        addConstraintsWithVisualFormat("V:[v0(30)]-40-[v1]", views: stateLabel, cancelButton)
         addConstraintsWithVisualFormat("V:[v0]-23-[v1(\(checkmarkViewMainDimension))]", views: iconImg, successCheckMark)
 
         backgroundView.alpha = 1

@@ -96,6 +96,22 @@ class ExpandCellForActionAHandler {
         let overlay = LFOverlay()
         overlay.showOverlay(forView: self.expandCellForActionAView, withTitle: nil)
 
+// Testing without using web APIs
+#if NO_WEB_API_TESTING
+        /* *****************************************************************************/
+        // This snipped of code comes from the "didSucceed" AzureAPI call below
+        self.expandCellForActionAView.actionASucceeded()
+        self.viewCell.setToActionAState()
+        if self.dataForBeacon != nil {
+            self.dataForBeacon!.didPerformActionA = true
+        }
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: AppSettingKeys.shouldUpdateSecondMainViewWithAPI)
+        overlay.endOverlay()
+        return
+        /* *****************************************************************************/
+#endif
+
         guard
             let dataForBeacon = self.dataForBeacon,
             let pM = ParametrizeForAPI.actionA(withDataForBcn: dataForBeacon)
