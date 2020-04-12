@@ -39,9 +39,12 @@ The IoT technology that this app uses are BLE iBeacons, see [Apple's docs](https
   </tr>
 </table>
 
-</br>
-
 # Getting Started
+
+## How To Build
+- Clone this repo
+- Open the `LF-iOS-App.xcworkspace` file in Xcode 11.4 (last tested here, other Xcode 11.* should work fine)
+- Run in a simulator or iPhone (this repo comes ready to run)
 
 ## State of the App
 When you clone the app, the debugging flag `-D NO_WEB_API_TESTING` will be set.  
