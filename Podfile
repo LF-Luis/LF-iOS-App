@@ -2,15 +2,15 @@
 # platform :ios, '9.0'
 
 target 'LF-iOS-App' do
-pod 'Eureka', '~> 4.2.0'
-pod 'Alamofire', '~> 4.7.3'
-pod 'AlamofireImage', '~> 3.4.1'
-pod 'Onboard'
-pod 'CryptoSwift', '~> 0.14.0'
-pod 'RealmSwift', '~> 3.13.1'
-pod 'DZNEmptyDataSet'
+pod 'Eureka', '~> 5.2.1'
+pod 'Alamofire', '~> 4.9.1'
+pod 'AlamofireImage', '~> 4.1.0'
+pod 'Onboard', '~> 2.3.3'
+pod 'CryptoSwift', '~> 1.3.0'
+pod 'RealmSwift', '~> 4.4.0'
+pod 'DZNEmptyDataSet', '~> 1.8.1'
 
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for LF-iOS-App
@@ -21,7 +21,6 @@ pod 'DZNEmptyDataSet'
   end
 
   target 'LF-iOS-AppUITests' do
-    inherit! :search_paths
     # Pods for testing
   end
 

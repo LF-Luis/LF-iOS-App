@@ -64,7 +64,7 @@ class AzureAPI {
                 }
 
                 print("----- From API ------")
-                print("name: \(dataForBeacon.mainName)")
+                print("name: \(String(describing: dataForBeacon.mainName))")
                 print("didPerformActionA: \(dataForBeacon.didPerformActionA)")
                 print("---------------------")
 

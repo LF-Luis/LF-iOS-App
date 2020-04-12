@@ -99,14 +99,6 @@ import RealmSwift
         super.init()
     }
 
-    required init(value: Any, schema: RLMSchema) {
-        super.init(value: value, schema: schema)
-    }
-
-    required init(realm: RLMRealm, schema: RLMObjectSchema) {
-        super.init(realm: realm, schema: schema)
-    }
-
     private enum CodingKeys: String, CodingKey {
         case mainName
         case website

@@ -91,6 +91,13 @@ class HomeCollectionVC: BaseCollectionVC, UserStateManagerDelegate {
                 let editUserInfo = EditUserInfo()
                 registrationNavController.interactivePopGestureRecognizer?.isEnabled = false
                 registrationNavController = UINavigationController(rootViewController: editUserInfo)
+                registrationNavController.modalPresentationStyle = .fullScreen
+                if #available(iOS 13.0, *) {
+                    // From iOS 13 and onwards, the default modal presentation has changed.
+                    // This variable is set so that the current presentable view is no able to be
+                    // swiped away
+                    registrationNavController.isModalInPresentation = true
+                }
 
                 self.present(registrationNavController, animated: true, completion: nil)
 
